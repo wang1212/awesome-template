@@ -1,0 +1,9 @@
+# see docs: https://prettier.io/docs/en/configuration.html
+
+printWidth: 160
+tabWidth: 4
+useTabs: true
+singleQuote: true
+semi: false
+jsxBracketSameLine: true
+endOfLine: 'auto'
