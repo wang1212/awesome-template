@@ -1,0 +1,18 @@
+# see docs: https://docs.docker.com/compose/compose-file/
+
+version: '3.8'
+services:
+  app:
+    # image: node:lts
+    image: node:lts-alpine
+    init: true
+    env_file:
+      - .env
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - '9229:9229'
+      - '$PORT:$PORT'
+    # command: sh -c 'npm install --registry=https://registry.npm.taobao.org/ && npm run dev'
+    command: sh -c 'npm install && npm run dev'

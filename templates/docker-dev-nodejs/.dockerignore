@@ -1,0 +1,7 @@
+# see docs: https://docs.docker.com/engine/reference/builder/#dockerignore-file
+
+# ide
+.vscode
+
+# dependencies
+/node_modules
