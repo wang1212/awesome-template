@@ -19,7 +19,13 @@ docker build --file ./Dockerfile.base --no-cache --tag node:base-1.0.0 .
 3. Build the **final production environment** image
 
 ```sh
-docker build --no-cache --tag node-app:-1.0.0 .
+docker build --no-cache --tag node-app:1.0.0 .
+```
+
+4. Run the container locally
+
+```sh
+docker run -dp 8080:8080 node-app:1.0.0
 ```
 
 ## More
