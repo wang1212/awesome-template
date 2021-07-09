@@ -1,0 +1,41 @@
+# see docs: https://docs.docker.com/engine/reference/builder/#dockerignore-file
+
+######################### COMMON ###############################################
+# https://raw.githubusercontent.com/erdaltsksn/dockerignore/main/templates/Common.dockerignore
+################################################################################
+
+# Git
+.git
+.gitignore
+.gitattributes
+.github
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+README.md
+CHANGELOG.md
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+SECURITY.md
+LICENSE
+
+# macOS (optional)
+.DS_Store
+
+# Visual Studio Code (optional)
+.vscode
+
+################################################################
+
+# dependencies
+/node_modules
+
+npm-debug.log
+
+coverage
+
+.editorconfig

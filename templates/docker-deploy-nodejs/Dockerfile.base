@@ -1,0 +1,12 @@
+# see docs: https://docs.docker.com/engine/reference/builder/
+
+FROM node:14-alpine
+
+# https://mirrors.ustc.edu.cn/help/alpine.html
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
+
+# https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md#handling-kernel-signals
+# https://github.com/krallin/tini#using-tini
+# Add Tini
+RUN apk add --no-cache tini
+ENTRYPOINT ["/sbin/tini", "--"]

@@ -1,0 +1,11 @@
+# see docs: https://docs.docker.com/engine/reference/builder/
+
+FROM node:14-alpine
+
+# https://mirrors.ustc.edu.cn/help/alpine.html
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
+
+# install dependencies
+RUN apk update && apk add --no-cache --virtual .build-deps curl \
+&& curl -sf https://gobinaries.com/tj/node-prune | sh \
+&& apk del .build-deps
