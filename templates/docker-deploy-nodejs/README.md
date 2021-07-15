@@ -18,6 +18,8 @@ docker build --file ./Dockerfile.base --no-cache --tag node:base-1.0.0 .
 
 3. Build the **final production environment** image
 
+Copy the _Dockerfile_ file to the root directory of the project you are about to publish, then
+
 ```sh
 docker build --no-cache --tag node-app:1.0.0 .
 ```
@@ -27,6 +29,8 @@ docker build --no-cache --tag node-app:1.0.0 .
 ```sh
 docker run -dp 8080:8080 node-app:1.0.0
 ```
+
+_Tips: the purpose of this project is to build a docker base image for deploying nodejs. The nodejs code in the *src* directory is only an example._
 
 ## More
 
