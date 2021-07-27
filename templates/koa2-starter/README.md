@@ -62,7 +62,7 @@ So the logger can be referenced by `ctx.logger`.
 If you can't access `ctx`, the following way is also possible:
 
 ```js
-import { getLogger } from 'path/to/middlewares/logger.js';
+import { getLogger } from 'path/to/utils/log4j.js';
 
 getLogger().info('test logs');
 ```
