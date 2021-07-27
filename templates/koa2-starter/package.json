@@ -8,7 +8,7 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --config=config/jest.config.mjs --passWithNoTests",
     "dev": "cross-env NODE_ENV=development nodemon --inspect=0.0.0.0:9229 index.js",
     "lint": "eslint src/ --config=.eslintrc.json --fix --quiet --cache --cache-location=node_modules/.cache/.eslintcache --format=pretty"
   },
@@ -33,7 +33,9 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-sonarjs": "^0.9.1",
+    "jest": "^27.0.6",
     "nodemon": "^2.0.12",
-    "prettier": "2.3.2"
+    "prettier": "2.3.2",
+    "supertest": "^6.1.4"
   }
 }

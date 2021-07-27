@@ -5,7 +5,8 @@
 import Router from '@koa/router';
 import * as controller from './controller.js';
 
-const router = new Router({ prefix: '/v1/users' });
+export const PREFIX = '/v1/users';
+const router = new Router({ prefix: PREFIX });
 
 router.get('/', controller.get);
 

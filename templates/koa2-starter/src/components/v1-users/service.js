@@ -2,12 +2,7 @@
  * users service
  * @version 1.0
  */
-
-/**
- * User type definition
- * @typedef {Object} User
- * @property {string} name
- */
+import { User } from '../../@jsdoc/User.type.js'; // eslint-disable-line
 
 /**
  * Users find

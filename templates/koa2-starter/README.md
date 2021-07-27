@@ -102,6 +102,24 @@ _Recommended koa middleware._
 - [koa-response-time](https://github.com/koajs/response-time)
 - [koa-useragent](https://github.com/rvboris/koa-useragent)
 
+## Document
+
+### API Document
+
+Use [VS Code Extension: REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) to write api documents, which is also easy to test and write.
+
+Example document file is _docs/api.http_.
+
+## Test
+
+### API Test
+
+Use [jest](https://jestjs.io/) and [supertest](https://github.com/visionmedia/supertest) modules to do api testing.
+
+The configuration file is _config/jest.config.mjs_.
+
+Example test file is _src/components/v1-users/api.test.js_.
+
 ## Usage
 
 - Local development
@@ -128,16 +146,14 @@ _This is the [default debugging scheme officially recommended by nodejs](https:/
 
 After the local service is started, access the api service in the Chrome browser, open DevTools and wait for the **Node.js logo button to appear in the upper left corner** and click to enter the debugging interface.
 
+- Test
+
+```sh
+npm test
+```
+
 - Deploy
 
 Adopt a containerized deployment plan and configure the _.dockerignore_ and _Dockerfile_ file appropriately.
 
 > see [docker-deploy-nodejs](./docker-deploy-nodejs)
-
-## Document
-
-### API Document
-
-Use [VS Code Extension: REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) to write api documents, which is also easy to test and write.
-
-Example document _docs/api.http_ file.

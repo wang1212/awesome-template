@@ -12,7 +12,7 @@ import log4js from 'koa-log4';
  */
 
 /**
- * @type {Koa.BaseContext & Koa.DefaultContext & EnhanceContext}
+ * @typedef {Koa.BaseContext & Koa.DefaultContext & EnhanceContext} KoaContext
  */
 export const KoaContext = null;
 

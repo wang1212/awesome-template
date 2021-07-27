@@ -18,7 +18,7 @@ async function start() {
     // https://koajs.com/#:~:text=callback()).listen(3001)%3B-,app.callback(),-Return%20a%20callback
     server = await http.createServer(app.callback()).listen(PORT, HOST);
 
-    getLogger().info(`Server running on http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}${BASE_URL} ...`);
+    getLogger().info(`Server running on http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}${BASE_URL} 🚀`);
   } catch (error) {
     getLogger().error(error);
     // eslint-disable-next-line no-process-exit
