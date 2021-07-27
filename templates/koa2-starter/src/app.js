@@ -5,8 +5,8 @@ import process from 'process';
 import http from 'http'; // eslint-disable-line no-unused-vars
 import Koa from 'koa';
 import helmet from 'koa-helmet';
-import log4js from 'koa-log4';
-import getLoggerMiddleware, { getLogger } from './middlewares/logger.js';
+import log4js, { getLogger } from './utils/log4j.js';
+import getLoggerMiddleware from './middlewares/logger.js';
 import rootRouter from './router.js';
 
 // see .env file
@@ -17,7 +17,7 @@ export default app;
 
 // * logs
 app.use(getLoggerMiddleware());
-// * see @jsdoc/koa.type.js file
+// @type see @jsdoc/koa.type.js file
 app.context.logger = getLogger();
 
 // * security
@@ -58,14 +58,14 @@ function gracefulShutdown() {
 
   // ! if after
   setTimeout(() => {
-    getLogger().error('Could not close connections in time, forcefully shutting down');
+    getLogger().error('Could not close connections in time, forcefully shutting down.');
     // eslint-disable-next-line no-process-exit
     process.exit(0);
   }, 1e3 * 30);
 }
 
 // https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/errorhandling/catchunhandledpromiserejection.md
-process.on('unhandledRejection', (reason, p) => {
+process.on('unhandledRejection', (reason /* , p */) => {
   // I just caught an unhandled promise rejection,
   // since we already have fallback handler for unhandled errors (see below),
   // let throw and let him handle that
@@ -74,7 +74,7 @@ process.on('unhandledRejection', (reason, p) => {
 
 // https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/errorhandling/shuttingtheprocess.md
 // https://nodejs.org/dist/latest/docs/api/process.html#process_event_uncaughtexception
-process.on('uncaughtException', (error, origin) => {
+process.on('uncaughtException', (/* error, origin */) => {
   // https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/errorhandling/operationalvsprogrammererror.md
   // TODO
 });

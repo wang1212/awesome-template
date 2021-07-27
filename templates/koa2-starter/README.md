@@ -40,7 +40,7 @@ Out-of-the-box middleware.
 
 Use the [log4js](https://github.com/dominhhai/koa-log4js) module to process logs uniformly.
 
-The configuration file is _src/middlewares/logger.js_.
+The configuration file is _src/utils/log4j.js_.
 
 The following configuration is made in the _src/app.js_ file:
 
