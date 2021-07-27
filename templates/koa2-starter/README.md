@@ -133,3 +133,11 @@ After the local service is started, access the api service in the Chrome browser
 Adopt a containerized deployment plan and configure the _.dockerignore_ and _Dockerfile_ file appropriately.
 
 > see [docker-deploy-nodejs](./docker-deploy-nodejs)
+
+## Document
+
+### API Document
+
+Use [VS Code Extension: REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) to write api documents, which is also easy to test and write.
+
+Example document _docs/api.http_ file.
