@@ -99,7 +99,7 @@ async function start() {
   try {
     server = await app.listen(PORT, HOST);
 
-    getLogger().info(`Server running on http://${HOST}:${PORT}${BASE_URL} ...`);
+    getLogger().info(`Server running on http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}${BASE_URL} ...`);
   } catch (e) {
     getLogger().error(e);
     // eslint-disable-next-line no-process-exit
