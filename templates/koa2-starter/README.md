@@ -32,6 +32,15 @@ _Warning: Please configure the environment variables of the **production** envir
 
 _Tips: Most of the environment variables in the production environment can use **default values**, and the default values can be configured when using environment variables, such as `process.env.PORT || '8080'`._
 
+### Code Lint
+
+Install **eslint** and **prettier** plugins.
+
+- VS Code Extension
+  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - [eslint-disable-snippets](https://marketplace.visualstudio.com/items?itemName=drKnoxy.eslint-disable-snippets)
+  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
 ### Built-in middleware
 
 Out-of-the-box middleware.
@@ -67,7 +76,7 @@ Use the [helmet](https://github.com/venables/koa-helmet) module to enable securi
 - [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 - [Koa Resources](https://github.com/koajs/koa/wiki)
 
-_Recommended middleware._
+_Recommended koa middleware._
 
 - [@koa/cors](https://github.com/koajs/cors)
 - [koa-proxies](https://github.com/vagusX/koa-proxies)
@@ -99,6 +108,12 @@ _Recommended middleware._
 
 ```sh
 npm run dev
+```
+
+- Code Lint
+
+```sh
+npm run lint
 ```
 
 - Local debug
