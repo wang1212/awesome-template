@@ -15,7 +15,7 @@ RUN node-prune
 FROM node:base-1.0.0
 
 ENV NODE_ENV=production
-ENV BASE_URL=/api1
+ENV BASE_URL=/api
 ENV PORT=8080
 EXPOSE 8080
 
