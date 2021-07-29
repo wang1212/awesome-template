@@ -12,6 +12,14 @@ Copy the _.env.example_ file and rename it to _.env_, and then configure it acco
 
 - Local development
 
+Run the server directly:
+
 ```sh
 docker-compose --file docker-compose.dev.yml up --build
+```
+
+Or, enter the shell:
+
+```sh
+docker-compose --file docker-compose.dev.yml run --service-ports --rm app sh
 ```
