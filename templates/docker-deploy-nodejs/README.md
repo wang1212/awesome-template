@@ -7,13 +7,13 @@ Use docker to deploy nodejs application.
 1. Build the base image for the **build phase**
 
 ```sh
-docker build --file ./Dockerfile.build --no-cache --tag node:build-1.0.0 .
+docker build --file ./Dockerfile.build --no-cache --tag node-alpine-build:1.0.0 .
 ```
 
 2. Build the basic image of the **production environment**
 
 ```sh
-docker build --file ./Dockerfile.base --no-cache --tag node:base-1.0.0 .
+docker build --file ./Dockerfile.base --no-cache --tag node-alpine-base:1.0.0 .
 ```
 
 3. Build the **final production environment** image
@@ -37,5 +37,5 @@ _Tips: the purpose of this project is to build a docker base image for deploying
 - Analyze the size of each layer of the built image
 
 ```sh
-docker image history node:base-1.0.0
+docker image history node-alpine-base:1.0.0
 ```

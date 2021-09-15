@@ -1,6 +1,7 @@
 # see docs: https://docs.docker.com/engine/reference/builder/
+# see file template: https://github.com/wang1212/awesome-template/blob/main/templates/docker-deploy-nodejs/Dockerfile
 
-FROM node:build-1.0.0 AS builder
+FROM node-alpine-build:1.0.0 AS builder
 
 ENV NODE_ENV=production
 
@@ -12,21 +13,22 @@ RUN npm ci --production --registry=https://registry.npm.taobao.org/ && npm cache
 RUN node-prune
 
 # ------------------------------------------
-FROM node:base-1.0.0
+FROM node-alpine-base:1.0.0
 
 ENV NODE_ENV=production
-ENV BASE_URL=/api
-ENV PORT=8080
-EXPOSE 8080
 
 WORKDIR /home/node/app
-
-RUN mkdir -p /home/node/app/logs
-RUN chmod 777 /home/node/app/logs
 
 COPY --from=builder /home/node/app/node_modules ./node_modules
 
 COPY . .
+
+ENV BASE_URL=/api
+ENV PORT=8080
+
+EXPOSE 8080
+
+RUN chown -R node:node /home/node/app/
 
 # https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md#non-root-user
 USER node
