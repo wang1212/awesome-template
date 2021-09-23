@@ -2,11 +2,11 @@
  * users service
  * @version 1.0
  */
-import { User } from '../../@jsdoc/User.type.js'; // eslint-disable-line
+// import { User } from ; // eslint-disable-line
 
 /**
  * Users find
- * @returns {Promise<User[]>}
+ * @returns {Promise<import('../../@jsdoc/User.type.js').User[]>}
  */
 export async function find() {
   return new Promise((resolve) => {
