@@ -2,11 +2,11 @@
  * users controller
  * @version 1.0
  */
-import * as service from './service.js';
+import * as service from './service';
 
 /**
  * Users get
- * @param { import('../../@jsdoc/koa.type.js').KoaContext } ctx
+ * @param { import('../../@jsdoc/koa.type').KoaContext } ctx
  */
 export async function get(ctx) {
   ctx.body = await service.find();

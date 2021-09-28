@@ -3,7 +3,7 @@
  * @version 1.0
  */
 import Router from '@koa/router';
-import * as controller from './controller.js';
+import * as controller from './controller';
 
 export const PREFIX = '/v1/users';
 const router = new Router({ prefix: PREFIX });

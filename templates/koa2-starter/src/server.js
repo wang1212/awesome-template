@@ -4,8 +4,8 @@
  */
 import process from 'process';
 import http from 'http';
-import app from './app.js';
-import log4js, { getLogger } from './utils/log4j.js';
+import app from './app';
+import log4js, { getLogger } from './utils/log4j';
 
 // see .env file
 const { PORT = '3000', HOST = '0.0.0.0', BASE_URL = '/api' } = process.env;

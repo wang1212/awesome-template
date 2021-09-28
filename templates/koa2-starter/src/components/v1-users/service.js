@@ -6,7 +6,7 @@
 
 /**
  * Users find
- * @returns {Promise<import('../../@jsdoc/User.type.js').User[]>}
+ * @returns {Promise<import('../../@jsdoc/User.type').User[]>}
  */
 export async function find() {
   return new Promise((resolve) => {

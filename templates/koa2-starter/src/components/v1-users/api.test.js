@@ -4,8 +4,8 @@
  */
 import process from 'process';
 import request from 'supertest'; // eslint-disable-line
-import app from '../../app.js';
-import { PREFIX } from './api.js';
+import app from '../../app';
+import { PREFIX } from './api';
 
 const { BASE_URL } = process.env;
 

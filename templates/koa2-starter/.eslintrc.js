@@ -22,8 +22,6 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:sonarjs/recommended',
   ],
-  rules: {
-    'import/extensions': ['error', 'ignorePackages'],
-  },
+  rules: {},
   globals: {},
 };

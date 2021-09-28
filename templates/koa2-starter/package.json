@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest --config=config/jest.config.mjs --passWithNoTests",
-    "dev": "cross-env NODE_ENV=development nodemon --inspect=0.0.0.0:9229 index.js",
+    "dev": "cross-env NODE_ENV=development nodemon --experimental-specifier-resolution=node --inspect=0.0.0.0:9229 index.js",
     "lint": "eslint src/ --config=.eslintrc.json --fix --quiet --cache --cache-location=node_modules/.cache/.eslintcache --format=pretty"
   },
   "keywords": [],

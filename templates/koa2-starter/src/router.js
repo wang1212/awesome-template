@@ -2,7 +2,7 @@
  * root router
  */
 import Router from '@koa/router';
-import { router as userRouter } from './components/v1-users/index.js';
+import { router as userRouter } from './components/v1-users/index';
 
 const rootRouter = new Router();
 

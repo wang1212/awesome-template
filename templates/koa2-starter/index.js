@@ -10,4 +10,4 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // eslint-disable-next-line node/no-unsupported-features/es-syntax
-import('./src/server.js');
+import('./src/server');
