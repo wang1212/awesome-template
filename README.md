@@ -9,10 +9,11 @@
 
 ## 目录
 
-*Resource navigation list.*
+_Resource navigation list._
 
 - [docker-deploy-nodejs](./templates/docker-deploy-nodejs)
 - [docker-dev-nodejs](./templates/docker-dev-nodejs)
 - [koa2-starter](./templates/koa2-starter)
+- [koa2-starter-typescript](./templates/koa2-starter-typescript)
 - [create-JavaScript-lib-starter](https://github.com/wang1212/create-lib-starter)
 - [create-web-app](https://github.com/wang1212/create-web-app)

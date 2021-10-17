@@ -1,0 +1,54 @@
+{
+  "name": "koa2-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --config=config/jest.config.mjs --passWithNoTests",
+    "dev": "cross-env NODE_ENV=development tsc-watch --onSuccess \"node --experimental-specifier-resolution=node --inspect=0.0.0.0:9229 dist/index.js\"",
+    "lint": "eslint src/ --config=.eslintrc.cjs --fix --quiet --cache --cache-location=node_modules/.cache/.eslintcache --format=pretty"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^10.0.0",
+    "koa": "^2.13.1",
+    "koa-helmet": "^6.1.0",
+    "koa-log4": "^2.3.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/koa": "^2.13.4",
+    "@types/koa-log4": "^2.3.3",
+    "@types/koa__router": "^8.0.8",
+    "@types/supertest": "^2.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-formatter-pretty": "^4.1.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-sonarjs": "^0.9.1",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "prettier": "2.3.2",
+    "supertest": "^6.1.4",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.4.3"
+  }
+}

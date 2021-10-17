@@ -1,0 +1,32 @@
+// see docs: https://www.typescriptlang.org/tsconfig
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "es2020",
+    "module": "es2020",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "typeRoots": ["./node_modules/@types", "./src/@types"]
+    // "strict": true
+  },
+  "include": ["index.ts", "src", "scripts", "config", ".eslintrc.cjs", "**/*.spec.ts", "**/*.test.ts"],
+  "exclude": ["src/assets/**/*", "src/vendors/**/*"],
+  // * https://www.typescriptlang.org/docs/handbook/configuring-watch.html
+  "watchOptions": {
+    // Use native file system events for files and directories
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    // Poll files for updates more frequently
+    // when they're updated a lot.
+    "fallbackPolling": "dynamicPriority",
+    // Don't coalesce watch notification
+    "synchronousWatchDirectory": true,
+    // Finally, two additional settings for reducing the amount of possible
+    // files to track  work from these directories
+    "excludeDirectories": ["node_modules", "build", "temp/*"],
+    "excludeFiles": ["temp/file.ts"]
+  }
+}
