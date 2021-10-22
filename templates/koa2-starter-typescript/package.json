@@ -43,11 +43,9 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-sonarjs": "^0.9.1",
     "jest": "^27.0.6",
-    "nodemon": "^2.0.12",
     "prettier": "2.3.2",
     "supertest": "^6.1.4",
     "ts-jest": "^27.0.5",
-    "ts-node": "^10.2.1",
     "tsc-watch": "^4.5.0",
     "typescript": "^4.4.3"
   }
